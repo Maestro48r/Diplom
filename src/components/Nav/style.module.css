@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    gap: 20px;
+    padding-right: 130px;
+}
+.container a {
+    font-family: 'intro-book';
+    font-size: 14px;
+}

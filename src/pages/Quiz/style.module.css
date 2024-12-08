@@ -1,0 +1,57 @@
+.nav {
+    width: 170px;
+    background-color: rgb(121, 55, 151);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+  }
+
+.container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.container hr {
+    color: rgb(18, 18, 19);
+    margin: 10px 1px;
+}
+
+.container h2, p {
+    font-family: 'caviar_dreams';
+}
+
+.container img {
+    max-width: 85%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.container input {
+    max-width: 10px;
+    margin-top: 10px;
+}
+
+.container label {
+    font-size: 20px;
+    padding: 15px;
+}
+
+.container form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.container button {
+    padding: 22px 44px;
+    font-size: 20px;
+    margin-left: 650px;
+}
+
+.container div {
+    margin-bottom: 10px;
+}

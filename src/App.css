@@ -1,0 +1,45 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: 'intro-bold';
+}
+
+@font-face {
+  font-family: 'intro-bold';
+  src: url('./Fonts/intro-bold.ttf');
+}
+
+@font-face {
+  font-family: 'intro-book';
+  src: url('./Fonts/intro-book.ttf');
+}
+
+@font-face {
+  font-family: 'intro-regular';
+  src: url('./Fonts/intro-regular.ttf');
+}
+
+@font-face {
+  font-family: 'intro_rust';
+  src: url('./Fonts/intro_rust.ttf');
+}
+
+@font-face {
+  font-family:'caviar_dreams';
+  src: url('./Fonts/caviar_dreams.ttf');
+}
+

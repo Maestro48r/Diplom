@@ -1,0 +1,41 @@
+.nav {
+    width: 170px;
+    background-color: rgb(121, 55, 151);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+  }
+
+.container {
+    display: flex;
+    background-color: rgb(121, 55, 151);
+    color: aliceblue;
+    margin-bottom: 60px;
+}
+
+.container div {
+    margin-top: 200px;
+    margin-left: 90px;
+}
+
+.container h1 {
+    padding-bottom: 20px;
+}
+
+.container p { 
+    font-family: 'caviar_dreams';
+    padding-bottom: 10px;
+}
+
+.container h2 {
+    font-family: 'intro-bold';
+    margin-left: 180px;
+}
+.container img {
+    display: block;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: 150px;
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
+}

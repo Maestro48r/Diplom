@@ -1,0 +1,24 @@
+.nav {
+    width: 170px;
+    background-color: rgb(121, 55, 151);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+  }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(121, 55, 151);
+    color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.card {
+    max-width: 380px;
+    height: fit-content;
+    padding: 30px 20px;
+}

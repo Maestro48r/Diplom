@@ -1,0 +1,85 @@
+.nav {
+  width: 170px;
+  background-color: rgb(121, 55, 151);
+  color: aliceblue;
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  margin-left: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  font-family: 'intro-regular';
+}
+
+.form div {
+  padding-bottom: 15px;
+}
+
+.price {
+  display: flex;
+  gap: 100px;
+  padding: 30px 20px;
+  font-size: 30px;
+  border: 1px;
+  border-color: rgb(68, 64, 64);
+  margin-left: 60px;
+}
+
+.gender {
+  display: flex;
+  gap: 100px;
+  font-size: 30px;
+  margin-left: 40px;
+}
+
+.form button {
+    padding: 15px;
+    margin-bottom: 10px;
+
+}
+
+.cards {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.card {
+  max-width: 280px;
+  height: fit-content;
+  box-shadow: 0 10px 10px gray;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+
+.card h2 {
+  font-size: 20px;
+  text-align: center;
+  color: blue;
+}
+
+.card h4 {
+  font-family: "intro-bold";
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(59, 9, 13);
+}
+
+.card h3 {
+  font-family: "intro-bold";
+  font-style: italic;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(236, 46, 62);
+}
