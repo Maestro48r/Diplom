@@ -1,18 +1,29 @@
 import axios from "axios";
 import style from "./style.module.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
 import { Link, useNavigate } from "react-router-dom";
-import CARD_ROUTE from "../../router";
+import { CartContext } from "../../Context/Cart";
+import Cart from "../Cart";
+import shoppingCart from "../../Media/icons8-shopping-cart-50.png";
 
-const Catalog = () => {
+const Products = (prop) => {
+
+  const [showModal, setShowModal] = useState(false);
+  const toggle = () => {
+    setShowModal(!showModal)
+  }
+
+  const { cartItems, addToCart } = useContext(CartContext);
+
   const navigate = useNavigate();
 
   const [sneakers, setSneakers] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const [min, setMin] = useState(1850);
-  const [max, setMax] = useState(25768);
+  const [max, setMax] = useState(27999);
 
   const [man, setMan] = useState(true);
   const [woman, setWoman] = useState(true);
@@ -105,8 +116,8 @@ const Catalog = () => {
               <div>{max}</div>
             </div>
             <Nouislider
-              range={{ min: 1850, max: 25768 }}
-              start={[1850, 25768]}
+              range={{ min: 1850, max: 27999 }}
+              start={[1850, 27999]}
               connect
               onUpdate={(slider) => {
                 setMin(Number(slider[0]));
@@ -135,7 +146,7 @@ const Catalog = () => {
             </div>
           </div>
           <div className={style.size}>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size35}
@@ -143,7 +154,7 @@ const Catalog = () => {
               />
               35
             </div>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size36}
@@ -151,7 +162,7 @@ const Catalog = () => {
               />
               36
             </div>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size37}
@@ -159,7 +170,7 @@ const Catalog = () => {
               />
               37
             </div>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size38}
@@ -167,7 +178,7 @@ const Catalog = () => {
               />
               38
             </div>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size39}
@@ -175,7 +186,7 @@ const Catalog = () => {
               />
               39
             </div>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size40}
@@ -183,7 +194,7 @@ const Catalog = () => {
               />
               40
             </div>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size41}
@@ -191,7 +202,7 @@ const Catalog = () => {
               />
               41
             </div>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size42}
@@ -199,7 +210,7 @@ const Catalog = () => {
               />
               42
             </div>
-            <div>
+            <div className={style.size_box}>
               <input
                 type="checkbox"
                 checked={size43}
@@ -208,24 +219,13 @@ const Catalog = () => {
               43
             </div>
           </div>
-
           <button onClick={filter}>Применить фильтры</button>
-          {sneakers &&
-            sneakers.map((item) => (
-              <div key={item.id}>
-                {item.id}. {item.title} цена: {item.price} *{" "}
-                {item.sizes.map((size) => (
-                  <span key={size}> ({size})</span>
-                ))}
-                <button
-                  onClick={() =>
-                    navigate(CARD_ROUTE + "/card" + item.id)
-                  }
-                >
-                  Посмотреть
-                </button>
-              </div>
-            ))}
+        </div>
+        <div className={style.cart}>
+          <h2>Магазин</h2>
+          {!showModal && <button onClick={toggle}>
+          <span className={style.productsCount}>{cartItems.length}</span>
+          <img src={shoppingCart} className={style.shoppingCart} alt="" /></button>}
         </div>
         <div className={style.cards}>
           {sneakers &&
@@ -233,7 +233,10 @@ const Catalog = () => {
               <div className={style.card} key={item.id}>
                 <img src={item.imgUrl} alt="" />
                 <h2>{item.title}</h2>
-                <p>{item.description}</p>
+                <h2>Размеры:</h2>
+                {item.sizes.map((size) => (
+                  <span key={size}> ({size})</span>
+                ))}
                 <h4>
                   Старая цена: <br></br>
                   {item.oldPrice} ₽
@@ -242,12 +245,19 @@ const Catalog = () => {
                   Новая цена: <br></br>
                   {item.price} ₽
                 </h3>
+                <div>
+                  <button onClick={() => navigate("/card_page" + "/" + item.id)}>
+                  Посмотреть
+                </button>
+                <button onClick={() => addToCart(item)}>Добавить в корзину</button>
+                </div>
               </div>
             ))}
         </div>
+        <Cart showModal={showModal} toggle={toggle} />
       </div>
     </>
   );
 };
 
-export default Catalog;
+export default Products;

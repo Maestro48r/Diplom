@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.form {
+    max-width: 380px;
+    background-color: rgb(121, 55, 151);
+    color: aliceblue;
+    
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.form h2 {
+    margin-top: 40px
+}
+
+.form p {
+    max-width: 60%;
+    margin: 20px auto;
+
+}
+.form input {
+    width: 90%;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+.form button {
+    width: 90%;
+    background: red;
+    color: aliceblue;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+}
+
+.insta h2 {
+    margin-bottom: 40px;
+}
+
+.foto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.foto_2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.foto_5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.foto_3 {
+    grid-column-start: 4;
+    grid-row-start: 1; 
+}
+
+.foto_4 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}

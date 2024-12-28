@@ -1,0 +1,29 @@
+.nav {
+    width: 170px;
+    background-color: rgb(121, 55, 151);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+  }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact span {
+    margin-bottom: 40px;
+}

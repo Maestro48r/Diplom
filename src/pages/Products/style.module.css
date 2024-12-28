@@ -15,7 +15,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 480px;
+  max-width: 480px;
   font-family: 'intro-regular';
 }
 
@@ -69,7 +69,6 @@
 }
 
 .card h4 {
-  font-family: "intro-bold";
   font-style: italic;
   font-size: 20px;
   text-align: center;
@@ -77,9 +76,62 @@
 }
 
 .card h3 {
-  font-family: "intro-bold";
   font-style: italic;
   font-size: 30px;
   text-align: center;
-  color: rgb(236, 46, 62);
+  color: red;
 }
+
+.size {
+  max-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 30px;
+}
+
+.size_box {
+  background: rgb(226, 217, 217);
+  padding: 30px 30px;
+}
+
+.cart button {
+  display: flex;
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  &:hover {
+    outline: 1px solid white;
+  }
+
+  .shoppingCart {
+    padding: 10px 10px;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+
+  .productsCount {
+    z-index: 1;
+    font-size: 32px;
+    top: 38px;
+    color: orange;
+  }
+}
+
+@media (max-width: 991px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+}
+

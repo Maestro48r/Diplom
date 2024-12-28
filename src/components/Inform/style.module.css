@@ -35,3 +35,34 @@
     font-size: 20px;
 
 }
+
+@media (max-width: 991px) {
+    .container {
+        margin-left: 53px;  
+    }
+
+    .container button {
+        width: 210px;
+        padding: 11px 10px;
+    }
+
+    .container h2 {
+        font-size: 100px;
+        left: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 25px;  
+    }
+
+    .container h1 {
+        width: 235px;
+        font-size: 20px;
+    }
+
+    .container p {
+        width: 280px;
+    }
+}

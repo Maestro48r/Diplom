@@ -7,3 +7,17 @@
     font-family: 'intro-book';
     font-size: 14px;
 }
+
+@media (max-width: 991px) {
+        .container {
+            gap: 10px;
+            padding-right: 45px;   
+        }
+}
+
+@media (max-width: 700px) {
+    .container {
+        gap: 10px;
+        padding-left: 15px;
+    }
+}

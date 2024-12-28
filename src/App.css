@@ -1,4 +1,5 @@
 *{
+  max-width: 1200px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -16,6 +17,18 @@ a {
 
 h1 {
   font-family: 'intro-bold';
+}
+
+h2 {
+  font-family: "intro-bold";
+}
+
+h3 {
+  font-family: "intro-bold";
+}
+
+h4 {
+  font-family: "intro-bold";
 }
 
 @font-face {

@@ -7,7 +7,6 @@
     gap: 20px;
     background-color: rgb(121, 55, 151);
     color: aliceblue;
-    margin-bottom: 60px;
 }
 
 .container hr {
@@ -15,14 +14,4 @@
     color: aliceblue;
     height: 3px;   
     margin-left: 100px;
-}
-
-@media (max-width: 991px) {
-    .container {
-        gap: 10px;  
-    }
-
-    .container hr {
-        margin-left: 50px; 
-    }
 }

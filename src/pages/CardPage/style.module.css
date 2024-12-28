@@ -1,0 +1,99 @@
+button {
+  padding: 10px 20px;
+}
+
+.card_page {
+  display: flex;
+  flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px 20px;
+  }
+
+.card_page img {
+  max-width: 50%;
+  padding: 20px 30px;
+}  
+
+.card_text {
+  max-width: 45%;
+  padding-top: 30px;
+}
+  
+  .card_page h2 {
+    font-size: 24px;
+    color: blue;
+    margin-bottom: 30px;
+  }
+  
+  .card_page h4 {
+    font-family: "intro-bold";
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(92, 82, 83);
+  }
+  
+  .card_page h3 {
+    font-family: "intro-bold";
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+    color: red;
+  }
+  
+.card_group1 {
+  display: flex;
+  gap: 100px;
+  margin-bottom: 30px;
+}
+
+.card_star {
+  display: flex;
+  justify-content: start;
+}
+
+.card_star img {
+  width: 15%;
+}
+
+.card_star h4 {
+  padding-top: 23px;
+}
+
+.card_size {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.card_size input {
+  padding: 10px 30px;
+}
+
+.card_price {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 30px;
+}
+
+.card_page button {
+  background: red;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 30px 200px;
+}
+
+.card_footer {
+  display: flex;
+  gap: 100px;
+  padding-left: 30px;
+}
+
+.card_description {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
