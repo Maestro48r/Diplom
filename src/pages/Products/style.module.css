@@ -82,6 +82,15 @@
   color: red;
 }
 
+.card_button {
+  width: 100%;
+  opacity: 0;
+}
+
+.card:hover .card_button {
+  opacity: 1;
+}
+
 .size {
   max-width: 300px;
   display: grid;

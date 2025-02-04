@@ -11,6 +11,7 @@ import Contacts from "./pages/Contacts";
 import Questions from "./pages/Questions";
 import Footer from "./pages/Footer";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/questions",
     element: <Questions />,
+  },
+  {
+    path: "/checkout",
+    element: <Checkout />
   },
   {
     path: "/footer",

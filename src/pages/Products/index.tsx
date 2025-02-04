@@ -222,7 +222,7 @@ const Products = (prop) => {
           <button onClick={filter}>Применить фильтры</button>
         </div>
         <div className={style.cart}>
-          <h2>Магазин</h2>
+          <h2>Корзина</h2>
           {!showModal && <button onClick={toggle}>
           <span className={style.productsCount}>{cartItems.length}</span>
           <img src={shoppingCart} className={style.shoppingCart} alt="" /></button>}
@@ -245,7 +245,7 @@ const Products = (prop) => {
                   Новая цена: <br></br>
                   {item.price} ₽
                 </h3>
-                <div>
+                <div className={style.card_button}>
                   <button onClick={() => navigate("/card_page" + "/" + item.id)}>
                   Посмотреть
                 </button>

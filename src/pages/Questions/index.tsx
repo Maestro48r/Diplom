@@ -4,12 +4,22 @@ import image2 from "../../Media/2yt2.jpeg";
 import image3 from "../../Media/3gt2.jpeg";
 import image4 from "../../Media/4re2.jpeg";
 import image5 from "../../Media/6tr2.jpeg";
-import { useState } from "react";
+import { FormEvent } from "react";
 
 const Questions = () => {
-
-    const [ name, setName ] = useState('');
-    const [ phone, setPhone] = useState('')
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+event.preventDefault();
+const form = new FormData (event.currentTarget);
+const data = Object.fromEntries(form);
+const postData = async () => {
+    const reg = await fetch(`https://1a1752655ec9a214.mokky.dev/users`, {
+        method: "POST",
+        body: JSON.stringify(data),
+    });
+};
+postData();
+console.log(data);
+    };
 
     return (
         <>
@@ -17,10 +27,10 @@ const Questions = () => {
                     <div className={style.form}>
                     <h2>Есть вопросы?</h2>
             <p>Заполните форму и наш менеджер свяжется с вами</p>
-            <form action="" method="post">
-<input type="text" id="name" name="name" value={name} onChange={e => setName(e.target.value)} placeholder="Ваше имя" />
-<input type="tel" id="phone" name="phone" value={phone} onChange={e => setPhone(e.target.value)} placeholder="Номер телефона" />
-<button type="submit">Отправить</button>
+            <form onSubmit={handleSubmit}>
+<label>Имя <input type="text" name="user_name" /></label>
+<label>Номер телефона <input type="tel" name="user_phone" placeholder="+7-000-000-00-00" /></label>
+<input type="submit" />
             </form>
                     </div>
  <div className={style.insta}>

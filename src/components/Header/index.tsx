@@ -5,6 +5,7 @@ import Inform from "../Inform";
 
 
 const Header = () => {
+
   return (
     <>
     <header className={style.container}>

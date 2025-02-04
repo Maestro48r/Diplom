@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../Context/Cart";
 import style from "./style.module.css";
+import { Link } from "react-router-dom";
 
 const Cart = ({ showModal, toggle }) => {
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
@@ -47,6 +48,7 @@ const Cart = ({ showModal, toggle }) => {
         {cartItems.length > 0 ? (
           <div>
             <h2>Итого: {getCartTotal()} ₽</h2>
+            <button><Link to="/checkout">Оформить</Link></button>
             <button
               onClick={() => {
                 clearCart();
